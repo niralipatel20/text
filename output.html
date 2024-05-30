@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text-preprocessing</title>
+    <!-- TODO Styles -->
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <form action="/preprocess" method="POST">
+        <div>
+            <label>INPUT TEXT</label><br>
+            <textarea>{{real_text}}</textarea><br>
+            <label>PREPROCESSED TEXT</label><br>
+            <textarea>{{preprocessed_data}}</textarea><br>
+        </div>
+    </form>    
+</body>
+</html> 

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text-preprocessing</title>
+    <!-- TODO Styles -->
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <form action="/preprocess" method="POST">
+        <div>
+            <div>
+                <label>INPUT TEXT</label><br>
+                    <textarea rows="5" columns="50" id="text_input" placeholder="Give the text" name="text_input">
+                    </textarea><br>
+            </div>
+            <div>
+                <input type="checkbox" name="tokenize" id="tokenize">
+                <label for="tokenize">Tokenization</label>
+            </div>
+            <div>
+                <input type="checkbox" name="lemmatization" id="lemmatization">
+                <label for="lemmatization">Lemmatization</label>
+            </div>
+            <div>
+                <input type="checkbox" name="pattern" id="pattern">
+                <label for="pattern">RegEx Pattern</label><br>
+                <text>Enter the RegEx Pattern</text>
+                <input type="text" id="re_input" name="re_input"><br>   
+            </div>
+            <div>
+                <input type="checkbox" name="upper" id="upper">
+                <label for="upper">UpperCase</label>
+            </div>
+            <div>
+                <input type="checkbox" name="lower" id="lower">
+                <label for="lower">LowerCase</label>
+            </div>
+            <div>
+                <input type="checkbox" name="capitalization" id="capitalization">
+                <label for="capitalization">Capitalization</label>
+            </div>
+            <div>
+                <input type="checkbox" name="whitespace" id="whitespace">
+                <label for="whitespace">whitespace Removal</label>
+            </div>
+            <div>
+                <input type="checkbox" name="emoji" id="emoji">
+                <label for="emoji">Emoji Removal</label><br>
+                <text>Enter the Emoji Pattern</text>
+                <input type="text" id="emoji_pattern" name="emoji_pattern"><br> 
+            </div>
+            <div>
+                <input type="checkbox" name="frequency" id="frequency">
+                <label for="frequency">Frequent Words Removal</label>
+            </div>
+            <div>
+                <input type="checkbox" name="rare" id="rare">
+                <label for="rare">Rare Words Removal</label>
+            </div>
+            <div>
+                <input type="checkbox" name="POS" id="POS">
+                <label for="POS">POS</label>
+            </div>
+            <div>
+                <input type="checkbox" name="NER" id="NER">
+                <label for="NER">NER</label>
+            </div>
+            
+            <button type="submit">SUBMIT</button>
+
+        </div>
+    </form>  
+</body>
+</html> 
